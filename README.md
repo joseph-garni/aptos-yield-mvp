@@ -125,5 +125,5 @@ Canva Slides Link:
 Extra:
 
 ## Thanks:
-Thanks to Greg and David at Aptos for their help in guiding this idea, and also Phil at EasyA for the initial ideadation session.
+Thanks to Greg and David at Aptos for their help in guiding this idea, and also Phil at EasyA for the spontaneous ideadation session on day 1.
 
