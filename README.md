@@ -1,4 +1,4 @@
-## You can view the app deployed on the testnet address at:
+## This app is deployed on the testnet address at:
 https://explorer.aptoslabs.com/object/0x09768087ccf44ae11f4007b7c88950662a4c50fed47e134140614d10f08c74ba?network=testnet
 
 ## Aptos Yield

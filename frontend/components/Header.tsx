@@ -22,9 +22,7 @@ export function Header() {
         {/* Navigation for larger screens */}
         <nav className="hidden md:flex gap-8 items-center">
           <a href="#" className="hover:text-blue-400 transition-colors">Dashboard</a>
-          <a href="#" className="hover:text-blue-400 transition-colors">Pools</a>
-          <a href="#" className="hover:text-blue-400 transition-colors">Rewards</a>
-          <a href="#" className="hover:text-blue-400 transition-colors">Analytics</a>
+          <a href="#" className="hover:text-blue-400 transition-colors">Invest</a>
         </nav>
 
         <div className="flex gap-4 items-center">
