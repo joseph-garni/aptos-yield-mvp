@@ -1,5 +1,4 @@
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
-import { useState } from "react";
 // Internal Components
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/Header";
@@ -10,7 +9,6 @@ import { MessageBoard } from "@/components/MessageBoard";
 
 function App() {
   const { connected } = useWallet();
-  const [activeTab, setActiveTab] = useState("dashboard");
 
   // Feature cards data
   const featureCards = [
@@ -113,74 +111,13 @@ function App() {
     </div>
   );
 
-  // Invest page (placeholder for now)
-  const InvestPage = () => (
-    <div className="max-w-5xl mx-auto px-4 mt-8">
-      <h1 className="text-3xl font-bold mb-6">Investment Opportunities</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card className="shadow-md">
-          <CardContent className="p-6">
-            <h2 className="text-xl font-semibold mb-2">Liquidity Pool</h2>
-            <p className="text-gray-600 mb-4">Provide liquidity to DEXs and earn fees</p>
-            <div className="flex justify-between items-center">
-              <span className="text-lg font-medium">APY: 4.5%</span>
-              <Button className="bg-purple-600 hover:bg-purple-700">Invest</Button>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className="shadow-md">
-          <CardContent className="p-6">
-            <h2 className="text-xl font-semibold mb-2">Staking</h2>
-            <p className="text-gray-600 mb-4">Stake your APT for network security</p>
-            <div className="flex justify-between items-center">
-              <span className="text-lg font-medium">APY: 3.8%</span>
-              <Button className="bg-purple-600 hover:bg-purple-700">Invest</Button>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  );
-
-  // Navigation handler
-  const renderContent = () => {
-    if (!connected) {
-      return <LandingPage />;
-    }
-    
-    switch (activeTab) {
-      case "dashboard":
-        return <Dashboard />;
-      case "invest":
-        return <InvestPage />;
-      default:
-        return <Dashboard />;
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      <nav className="bg-white shadow-sm py-4">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="flex space-x-8">
-            <button 
-              onClick={() => setActiveTab("dashboard")}
-              className={`${activeTab === "dashboard" ? "text-purple-600 border-b-2 border-purple-600" : "text-gray-600"} font-medium`}
-            >
-              Dashboard
-            </button>
-            <button 
-              onClick={() => setActiveTab("invest")}
-              className={`${activeTab === "invest" ? "text-purple-600 border-b-2 border-purple-600" : "text-gray-600"} font-medium`}
-            >
-              Invest
-            </button>
-          </div>
-        </div>
-      </nav>
       
-      {renderContent()}
+      {/* Removed the navigation section that was here */}
+      
+      {connected ? <Dashboard /> : <LandingPage />}
     </div>
   );
 }

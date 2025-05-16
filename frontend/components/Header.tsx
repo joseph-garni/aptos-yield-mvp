@@ -46,9 +46,7 @@ export function Header() {
         <div className="md:hidden px-4 pb-4 pt-1 bg-slate-900">
           <nav className="flex flex-col space-y-3">
             <a href="#" className="py-2 px-3 hover:bg-slate-700 rounded">Dashboard</a>
-            <a href="#" className="py-2 px-3 hover:bg-slate-700 rounded">Pools</a>
-            <a href="#" className="py-2 px-3 hover:bg-slate-700 rounded">Rewards</a>
-            <a href="#" className="py-2 px-3 hover:bg-slate-700 rounded">Analytics</a>
+            <a href="#" className="py-2 px-3 hover:bg-slate-700 rounded">Invest</a>
           </nav>
         </div>
       )}
