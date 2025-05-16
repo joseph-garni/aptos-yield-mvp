@@ -8,6 +8,13 @@ Aptos Yield specifically takes advantage of the staking, lending, and farming Ap
 
 The allocation engine takes in user capital investment, risk (conservative, balanced, aggressive), yield target, and time horizon (to acheive yield target).
 
+## Demo
+
+![Homepage](Screenshot 2025-05-16 at 11.12.26.png)
+![Dashboard](Screenshot 2025-05-16 at 11.12.50.png)
+![Invest-Page-Pre-Confirmation](Screenshot 2025-05-16 at 11.13.49.png)
+![Invest-Page-Confirmation](Screenshot 2025-05-16 at 11.59.14.png)
+
 ## The allocation engine deals with six Aptos Protocols:
 
 1. Liquidswap
