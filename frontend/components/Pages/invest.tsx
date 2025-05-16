@@ -1,70 +1,155 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
 
 const Invest = () => {
   const { account } = useWallet();
+  const [investmentAmount, setInvestmentAmount] = useState("");
+  const [riskProfile, setRiskProfile] = useState("Balanced");
+  const [investmentHorizon, setInvestmentHorizon] = useState("30 Days");
 
   return (
     <div className="max-w-5xl mx-auto px-4 mt-8 pb-12">
-      <h1 className="text-2xl font-bold mb-6">Your Dashboard</h1>
+      <h1 className="text-2xl font-bold mb-6">Invest Your Capital</h1>
       
       <div className="border border-gray-200 rounded-md p-6 mb-8">
         <div className="flex items-center gap-2 mb-2">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
           </svg>
-          <h2 className="text-xl font-bold">Portfolio Overview</h2>
+          <h2 className="text-xl font-bold">Investment Preferences</h2>
         </div>
-        <p className="text-gray-600 mb-6">Summary of your investments and earnings.</p>
+        <p className="text-gray-600 mb-6">Tell us how you'd like to invest, and we'll find the best opportunities.</p>
         
-        <div className="space-y-4">
+        <div className="space-y-6">
           <div>
-            <p className="text-gray-600">NFT ID (Proof of Investment)</p>
-            <p className="text-lg font-semibold">AY-NFT-007</p>
+            <p className="text-gray-600 mb-2">Investment Amount (USD)</p>
+            <input
+              type="text"
+              placeholder="e.g., 500"
+              value={investmentAmount}
+              onChange={(e) => setInvestmentAmount(e.target.value)}
+              className="w-full p-2 border border-gray-300 rounded-md"
+            />
           </div>
           
           <div>
-            <p className="text-gray-600">Total Invested (USD)</p>
-            <p className="text-lg font-semibold">$5,000</p>
+            <p className="text-gray-600 mb-2">Risk Profile</p>
+            <div className="flex gap-6 mt-2">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="riskProfile"
+                  checked={riskProfile === "Conservative"}
+                  onChange={() => setRiskProfile("Conservative")}
+                  className="h-4 w-4"
+                />
+                <span>Conservative</span>
+              </label>
+              
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="riskProfile"
+                  checked={riskProfile === "Balanced"}
+                  onChange={() => setRiskProfile("Balanced")}
+                  className="h-4 w-4"
+                />
+                <span>Balanced</span>
+              </label>
+              
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="riskProfile"
+                  checked={riskProfile === "Aggressive"}
+                  onChange={() => setRiskProfile("Aggressive")}
+                  className="h-4 w-4"
+                />
+                <span>Aggressive</span>
+              </label>
+            </div>
           </div>
           
           <div>
-            <p className="text-gray-600">Current Portfolio Value (USD)</p>
-            <p className="text-lg font-semibold">$5,250</p>
-          </div>
-          
-          <div>
-            <p className="text-gray-600">Estimated APY</p>
-            <p className="text-lg font-semibold text-green-500">12.5%</p>
-          </div>
-          
-          <div>
-            <p className="text-gray-600">Active Investment Strategies</p>
-            <p className="text-lg font-semibold">3</p>
+            <p className="text-gray-600 mb-2">Investment Horizon</p>
+            <div className="grid grid-cols-3 gap-6 mt-2">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="horizon"
+                  checked={investmentHorizon === "7 Days"}
+                  onChange={() => setInvestmentHorizon("7 Days")}
+                  className="h-4 w-4"
+                />
+                <span>7 Days</span>
+              </label>
+              
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="horizon"
+                  checked={investmentHorizon === "30 Days"}
+                  onChange={() => setInvestmentHorizon("30 Days")}
+                  className="h-4 w-4"
+                />
+                <span>30 Days</span>
+              </label>
+              
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="horizon"
+                  checked={investmentHorizon === "90 Days"}
+                  onChange={() => setInvestmentHorizon("90 Days")}
+                  className="h-4 w-4"
+                />
+                <span>90 Days</span>
+              </label>
+              
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="horizon"
+                  checked={investmentHorizon === "1 Year"}
+                  onChange={() => setInvestmentHorizon("1 Year")}
+                  className="h-4 w-4"
+                />
+                <span>1 Year</span>
+              </label>
+              
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="horizon"
+                  checked={investmentHorizon === "2 Years"}
+                  onChange={() => setInvestmentHorizon("2 Years")}
+                  className="h-4 w-4"
+                />
+                <span>2 Years</span>
+              </label>
+              
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="horizon"
+                  checked={investmentHorizon === "Custom"}
+                  onChange={() => setInvestmentHorizon("Custom")}
+                  className="h-4 w-4"
+                />
+                <span>Custom</span>
+              </label>
+            </div>
           </div>
         </div>
         
-        <div className="flex justify-end mt-6">
+        <div className="mt-8">
           <Button 
-            className="bg-indigo-900 hover:bg-indigo-800 text-white px-4 py-2 rounded flex items-center gap-2"
+            className="bg-indigo-900 hover:bg-indigo-800 text-white px-4 py-2 rounded"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clipRule="evenodd" />
-            </svg>
-            Invest More Capital
+            Find Investment Opportunities
           </Button>
         </div>
-      </div>
-      
-      <div className="border border-gray-200 rounded-md p-6">
-        <h2 className="text-xl font-bold mb-2">Active Investments</h2>
-        <p className="text-gray-600 mb-6">Details about your ongoing investment strategies.</p>
-        
-        <p className="text-gray-600">
-          Your active investments will be displayed here. (e.g., Strategy A: $2000 in Protocol X, Strategy B: $3000 in Protocol Y)
-        </p>
       </div>
     </div>
   );
