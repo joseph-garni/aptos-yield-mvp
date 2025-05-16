@@ -10,7 +10,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           {/* You can add your logo here */}
           <img 
-            src="/api/placeholder/40/40" 
+            src="/icons/aptos-logo.png" 
             alt="Aptos Yield Logo" 
             className="w-10 h-10 rounded-full" 
           />
