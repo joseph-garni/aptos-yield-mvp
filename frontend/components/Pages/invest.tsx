@@ -7,6 +7,17 @@ const Invest = () => {
   const [investmentAmount, setInvestmentAmount] = useState("");
   const [riskProfile, setRiskProfile] = useState("Balanced");
   const [investmentHorizon, setInvestmentHorizon] = useState("30 Days");
+  const [yieldTarget, setYieldTarget] = useState("");
+  const [showNFTModal, setShowNFTModal] = useState(false);
+  const [contractId, setContractId] = useState("");
+
+  // Generate random NFT ID when submitting
+  const handleSubmit = () => {
+    // Generate a random NFT ID
+    const randomId = "AY-NFT-" + Math.floor(1000 + Math.random() * 9000);
+    setContractId(randomId);
+    setShowNFTModal(true);
+  };
 
   return (
     <div className="max-w-5xl mx-auto px-4 mt-8 pb-12">
@@ -29,6 +40,17 @@ const Invest = () => {
               placeholder="e.g., 500"
               value={investmentAmount}
               onChange={(e) => setInvestmentAmount(e.target.value)}
+              className="w-full p-2 border border-gray-300 rounded-md"
+            />
+          </div>
+          
+          <div>
+            <p className="text-gray-600 mb-2">Yield Target (%)</p>
+            <input
+              type="text"
+              placeholder="e.g., 8.5"
+              value={yieldTarget}
+              onChange={(e) => setYieldTarget(e.target.value)}
               className="w-full p-2 border border-gray-300 rounded-md"
             />
           </div>
@@ -146,11 +168,85 @@ const Invest = () => {
         <div className="mt-8">
           <Button 
             className="bg-indigo-900 hover:bg-indigo-800 text-white px-4 py-2 rounded"
+            onClick={handleSubmit}
           >
-            Find Investment Opportunities
+            Submit Investment
           </Button>
         </div>
       </div>
+      
+      {/* NFT Contract Modal */}
+      {showNFTModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg max-w-md w-full p-6 relative">
+            <button 
+              onClick={() => setShowNFTModal(false)} 
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            
+            <h3 className="text-xl font-bold mb-4 text-center">Investment Contract Created</h3>
+            
+            <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg p-6 mb-6">
+              <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-lg p-5 border border-white border-opacity-20">
+                <div className="flex justify-between items-center mb-4">
+                  <span className="text-white font-semibold">APT Yield NFT</span>
+                  <span className="text-white font-mono">{contractId}</span>
+                </div>
+                
+                <div className="flex flex-col gap-2 text-white mb-4">
+                  <div className="flex justify-between">
+                    <span>Amount:</span>
+                    <span className="font-semibold">${investmentAmount}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Yield Target:</span>
+                    <span className="font-semibold">{yieldTarget}%</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Risk Profile:</span>
+                    <span className="font-semibold">{riskProfile}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Duration:</span>
+                    <span className="font-semibold">{investmentHorizon}</span>
+                  </div>
+                </div>
+                
+                <div className="text-xs text-white text-opacity-70 text-center">
+                  This NFT represents your ownership of this investment contract on the Aptos blockchain
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-center mb-6">
+              <p>Your investment has been successfully processed. This NFT serves as proof of your investment.</p>
+            </div>
+            
+            <div className="flex justify-center">
+              <Button 
+                className="bg-indigo-900 hover:bg-indigo-800 text-white px-6 py-2 rounded mr-4"
+                onClick={() => {
+                  setShowNFTModal(false);
+                  // Here you can add navigation to dashboard after successful investment
+                }}
+              >
+                View Dashboard
+              </Button>
+              
+              <Button 
+                className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-2 rounded border border-gray-300"
+                onClick={() => setShowNFTModal(false)}
+              >
+                Close
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
