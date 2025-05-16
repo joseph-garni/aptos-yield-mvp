@@ -43,13 +43,13 @@ For all other available CLI commands, can run `npx aptos` and see a list of all 
 https://explorer.aptoslabs.com/object/0x09768087ccf44ae11f4007b7c88950662a4c50fed47e134140614d10f08c74ba?network=testnet
 
 ## Aptos Yield
-The platform that allows retail investors to achieve their yield targets (taking advantage of aptos protocols). 
+The platform that allows retail investors to achieve their yield targets (by taking advantage of aptos protocols). 
 
 Aptos Yield specifically takes advantage of the staking, lending, and farming Aptos protocols available on Aptos, Aptos's unique ability to frequently rebalance portfolios (in the form of Aptos protocol weight) (across protocol addresses) and Aptos's low gas fees.
 
 The allocation engine takes in user capital investment, risk (conservative, balanced, aggressive), yield target, and time horizon (to acheive yield target).
 
-The allocation engine deals with six Aptos Protocols:
+## The allocation engine deals with six Aptos Protocols:
 
 1. Liquidswap
 
@@ -104,7 +104,7 @@ Concentrated Liquidity Positions: 10-25% APR
 Stablecoin LP Rewards: 5-18% APR
 Governance Staking: Additional 3-8% APR
 
-Current Functionality:
+## Current Functionality:
 
 1. Deployed on testnet and frontend features complete across homepage, connecting wallet
 2. Ability to connect wallet via aptos wallet connect sdk
@@ -115,7 +115,7 @@ Loom Link:
 Aptos Yield - Presentation:
 Canva Slides Link: 
 
-Next (Future) Developments:
+## Next (Future) Developments:
 1. Write a basic ML allocation engine for distributing investor capital across the top six Aptos Protocols to achieve yield targets based on risk profile and time horizon.
 2. Implement smart contracts to move aptos from aptos wallet to protocol addresses based on allocation engine.
 3. Implement smart contract to user aptos wallet address once allocation engine has distributed capital / executed ( NFT is contract of ownership for assets in the protocol addresses)
@@ -124,6 +124,6 @@ Next (Future) Developments:
 
 Extra:
 
-Thanks:
+## Thanks:
 Thanks to Greg and David at Aptos for their help in guiding this idea, and also Phil at EasyA for the initial ideadation session.
 
