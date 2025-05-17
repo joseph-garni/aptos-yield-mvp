@@ -77,7 +77,8 @@ Governance Staking: Additional 3-8% APR
 
 ## Aptos Yield - Demo:
 Loom Link: 
-<div style="position: relative; padding-bottom: 54.37499999999999%; height: 0;"><iframe src="https://www.loom.com/embed/4612956a12824fbcaacece674da2d4ea?sid=c313ec68-d880-4916-b5e3-2776efd604fd" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<iframe width="640" height="348" src="https://www.loom.com/embed/4612956a12824fbcaacece674da2d4ea?sid=d821a5ed-4740-4d7b-ad4a-8a29c3fc624c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Aptos Yield - Presentation:
 Canva Slides Link: https://www.canva.com/design/DAGnoYxRPsk/6vifI4pDpKQivGffh3oEiA/edit?utm_content=DAGnoYxRPsk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
