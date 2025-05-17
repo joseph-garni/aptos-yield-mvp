@@ -72,7 +72,7 @@ Governance Staking: Additional 3-8% APR
 
 ## Current Functionality:
 
-1. Deployed on testnet and frontend features complete across homepage, connecting wallet
+1. Built ontop of the boilterplate template deployed on testnet. The frontend features are complete, connecting wallet via custodial wallet creation
 2. Ability to connect wallet via aptos wallet connect sdk
 
 ## Aptos Yield - Demo:
@@ -87,8 +87,6 @@ Canva Slides Link: https://www.canva.com/design/DAGnoYxRPsk/6vifI4pDpKQivGffh3oE
 3. Implement smart contract to user aptos wallet address once allocation engine has distributed capital / executed ( NFT is contract of ownership for assets in the protocol addresses)
 4. Implement vault mechanism for protocol addresses
 5. Implement ability to track protocol addresses (portfolio balance) for providing portfolio balance dashboard
-
-Extra:
 
 ## Thanks:
 Thanks to Greg and David at Aptos for their help in guiding this idea, and also Phil at EasyA for the spontaneous ideadation session on day one. 
