@@ -21,8 +21,8 @@ const Dashboard = () => {
   const activeInvestments = [
     {
       id: "ST-001",
-      name: "Liquidity Pool",
-      protocol: "AptosSwap",
+      name: "Lending",
+      protocol: "Ares Market",
       amount: 2000,
       apy: 4.5,
       startDate: "2025-04-15",
@@ -31,8 +31,8 @@ const Dashboard = () => {
     },
     {
       id: "ST-002",
-      name: "Staking",
-      protocol: "Aptos Network",
+      name: "DEX",
+      protocol: "Thala Labs",
       amount: 1500,
       apy: 3.8,
       startDate: "2025-04-10",
@@ -42,7 +42,7 @@ const Dashboard = () => {
     {
       id: "ST-003",
       name: "Yield Farming",
-      protocol: "StableYield",
+      protocol: "Pancake Swap",
       amount: 1500,
       apy: 5.2,
       startDate: "2025-04-20",

@@ -10,10 +10,10 @@ The allocation engine takes in user capital investment, risk (conservative, bala
 
 ## Demo
 
-![Homepage](Screenshot 2025-05-16 at 11.12.26.png)
-![Dashboard](Screenshot 2025-05-16 at 11.12.50.png)
-![Invest-Page-Pre-Confirmation](Screenshot 2025-05-16 at 11.13.49.png)
-![Invest-Page-Confirmation](Screenshot 2025-05-16 at 11.59.14.png)
+![Homepage](homepage.png)
+![Dashboard](dashboard.png)
+![Invest-Page-Pre-Confirmation](invest-pre-submission.png)
+![Invest-Page-Confirmation](invest-post-submission.png)
 
 ## The allocation engine deals with six Aptos Protocols:
 
@@ -79,7 +79,7 @@ Governance Staking: Additional 3-8% APR
 Loom Link: 
 
 ## Aptos Yield - Presentation:
-Canva Slides Link: 
+Canva Slides Link: https://www.canva.com/design/DAGnoYxRPsk/6vifI4pDpKQivGffh3oEiA/edit?utm_content=DAGnoYxRPsk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 ## Next (Future) Developments:
 1. Write a basic ML allocation engine for distributing investor capital across the top six Aptos Protocols to achieve yield targets based on risk profile and time horizon.

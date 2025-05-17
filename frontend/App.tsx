@@ -33,9 +33,7 @@ function App() {
       </h1>
       
       <p className="text-xl text-gray-600 text-center max-w-3xl mb-12">
-        Maximize your returns on the Aptos blockchain. Connect your
-        wallet, choose your risk profile, and let our smart engine allocate
-        your capital for optimal yield.
+      Empowers retail investors to achieve their yield targets on capital investments through AI-powered allocation of Aptos protocols and transparent NFT ownership contracts
       </p>
       
       <button 
