@@ -75,12 +75,12 @@ Governance Staking: Additional 3-8% APR
 1. Built ontop of the boilterplate template deployed on testnet. The frontend features are complete, connecting wallet via custodial wallet creation
 2. Ability to connect wallet via aptos wallet connect sdk
 
-## Aptos Yield - Demo:
+## Aptos Yield Demo:
 
 [![Watch the Aptos Yield Demo](aptos-yield-hackathon-demo.png)](https://www.loom.com/share/4612956a12824fbcaacece674da2d4ea?sid=d0634f1b-fd4f-4858-990e-735ed5625988)
 
 
-## Aptos Yield - Presentation:
+## Aptos Yield Presentation:
 
 Canva Slides Link: https://www.canva.com/design/DAGnoYxRPsk/6vifI4pDpKQivGffh3oEiA/edit?utm_content=DAGnoYxRPsk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
