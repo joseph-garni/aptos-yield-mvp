@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
 
 const Invest = () => {
-  const { account } = useWallet();
+  const { account: _account } = useWallet();
   const [investmentAmount, setInvestmentAmount] = useState("");
   const [riskProfile, setRiskProfile] = useState("Balanced");
   const [investmentHorizon, setInvestmentHorizon] = useState("30 Days");

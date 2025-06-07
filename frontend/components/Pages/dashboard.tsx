@@ -61,7 +61,7 @@ const Dashboard = () => {
   };
   
   // Calculate total earnings 
-  const calculateTotalEarnings = () => {
+  const _calculateTotalEarnings = () => {
     return activeInvestments.reduce((total, investment) => {
       const investmentDuration = calculateDaysRemaining(investment.endDate);
       const dailyReturn = (investment.amount * (investment.apy / 100)) / 365;
