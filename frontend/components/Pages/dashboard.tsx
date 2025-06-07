@@ -60,14 +60,16 @@ const Dashboard = () => {
     return diffDays > 0 ? diffDays : 0;
   };
   
+  /*
   // Calculate total earnings 
-  const _calculateTotalEarnings = () => {
+  const calculateTotalEarnings = () => {
     return activeInvestments.reduce((total, investment) => {
       const investmentDuration = calculateDaysRemaining(investment.endDate);
       const dailyReturn = (investment.amount * (investment.apy / 100)) / 365;
       return total + (dailyReturn * investmentDuration);
     }, 0);
   };
+  */
 
   return (
     <div className="max-w-5xl mx-auto px-4 mt-8 pb-12">
