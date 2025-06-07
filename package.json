@@ -38,8 +38,7 @@
     "react-router-dom": "^6.30.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "vite-plugin-node-polyfills": "^0.23.0",
-    "aptos": "^1.21.0"
+    "vite-plugin-node-polyfills": "^0.23.0"
   },
   "overrides":{
     "@aptos-labs/wallet-standard": "^0.3.1"
