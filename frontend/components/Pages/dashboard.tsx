@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const Dashboard = () => {
-  const { account } = useWallet();
+  const { account: _account } = useWallet();
   const [activeTab, setActiveTab] = useState("overview");
   
   // Sample data for the portfolio performance chart
@@ -52,10 +52,10 @@ const Dashboard = () => {
   ];
   
   // Function to calculate days remaining
-  const calculateDaysRemaining = (endDate) => {
+  const calculateDaysRemaining = (endDate: string | Date) => {
     const end = new Date(endDate);
     const today = new Date();
-    const diffTime = end - today;
+    const diffTime = end.getTime() - today.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     return diffDays > 0 ? diffDays : 0;
   };
