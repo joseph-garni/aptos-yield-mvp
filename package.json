@@ -17,7 +17,7 @@
     "fmt": "npm run _fmt -- --write"
   },
   "dependencies": {
-    "@aptos-labs/ts-sdk": "^1.39.0",
+    "@aptos-labs/ts-sdk": "^2.0.0",
     "@aptos-labs/wallet-adapter-react": "^6.1.2",
     "@aptos-labs/wallet-adapter-core": "^5.7.1",
     "@aptos-labs/wallet-standard": "^0.3.1",
@@ -40,9 +40,9 @@
     "tailwindcss-animate": "^1.0.7",
     "vite-plugin-node-polyfills": "^0.23.0"
   },
-  "overrides":{
+  "overrides": {
     "vite": {
-      "rollup":"npm:@rollup/wasm-node"
+      "rollup": "npm:@rollup/wasm-node"
     }
   },
   "devDependencies": {
@@ -53,14 +53,14 @@
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
-    "dotenv": "16.3.1",
+    "dotenv": "^16.3.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "postcss": "^8.4.38",
     "prettier": "^3.3.2",
     "tailwindcss": "^3.4.3",
-    "tree-kill": "1.2.2",
+    "tree-kill": "^1.2.2",
     "typescript": "^5.2.2",
     "vercel": "^35.2.4",
     "vite": "^5.2.0",
