@@ -43,6 +43,12 @@
   "overrides": {
     "vite": {
       "rollup": "npm:@rollup/wasm-node"
+    },
+    "@aptos-labs/wallet-standard": {
+      "@aptos-labs/ts-sdk": "^2.0.0"
+    },
+    "@thalalabs/surf": {
+      "@aptos-labs/ts-sdk": "^1.37.1"
     }
   },
   "devDependencies": {
